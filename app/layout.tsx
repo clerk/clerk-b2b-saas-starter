@@ -30,11 +30,6 @@ export default function RootLayout({
       appearance={{
         cssLayerName: 'clerk',
       }}
-      afterSignOutUrl='/sign-in'
-      signInForceRedirectUrl='/dashboard'
-      signUpForceRedirectUrl='/onboarding'
-      signInUrl='/sign-in'
-      signUpUrl='/sign-up'
     >
       <html lang='en' className={`${geistSans.variable} ${geistMono.variable}`}>
         <body className='bg-neutral-50 antialiased'>

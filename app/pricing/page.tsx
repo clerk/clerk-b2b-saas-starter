@@ -1,44 +1,13 @@
 'use client';
 
-import Link from 'next/link';
-import { ClerkLogo } from '../_components/clerk-logo';
+import { Header } from '@/components/header';
 import { PricingTable } from '@clerk/nextjs';
 
 export default function PricingPage() {
   return (
     <div className='min-h-screen bg-white'>
       {/* Navigation */}
-      <nav className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-        <div className='flex h-16 items-center justify-between'>
-          <div className='flex items-center'>
-            <Link href='/'>
-              <ClerkLogo />
-            </Link>
-            <Link href='/' className='ml-3 text-xl font-bold text-gray-900'>
-              SaaS Starter
-            </Link>
-          </div>
-          <div className='hidden md:block'>
-            <div className='flex items-center space-x-8'>
-              <Link href='/pricing' className='font-medium text-blue-600'>
-                Pricing
-              </Link>
-              <Link
-                href='/sign-in'
-                className='text-gray-600 hover:text-gray-900'
-              >
-                Sign In
-              </Link>
-              <Link
-                href='/sign-up'
-                className='rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700'
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header variant='marketing' currentPage='pricing' />
 
       {/* Pricing Header */}
       <div className='mx-auto max-w-7xl px-4 pt-20 pb-16 sm:px-6 lg:px-8'>

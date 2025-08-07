@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className='min-[2500px]::max-w-[50rem] flex w-full flex-col flex-wrap items-start border-t border-[#EEEEF0] bg-white pt-6 pr-6 pb-9 pl-6 md:flex-row md:flex-nowrap md:justify-between xl:mx-auto'>
+    <footer className='min-[2500px]::max-w-[50rem] flex h-[100px] w-full flex-col flex-wrap items-start border-t border-[#EEEEF0] bg-white pt-6 pr-6 pb-9 pl-6 md:flex-row md:flex-nowrap md:justify-between xl:mx-auto'>
       <div className='mr-auto ml-auto flex justify-start md:w-2/3'>
         <a
           href='https://clerk.com/?utm_source=nextjs-app-quickstart&utm_medium=template_repos&utm_campaign=nextjs_keyless_quickstart'

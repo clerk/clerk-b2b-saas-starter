@@ -1,7 +1,6 @@
 'use client';
 
 import { useUser, PricingTable } from '@clerk/nextjs';
-import Link from 'next/link';
 
 export default function BillingPage() {
   const { user } = useUser();
