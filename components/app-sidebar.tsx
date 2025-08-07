@@ -24,7 +24,6 @@ import {
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
 import { OrganizationSwitcher, UserButton } from '@clerk/nextjs';
-import { Badge } from 'lucide-react';
 
 const data = {
   navMain: [

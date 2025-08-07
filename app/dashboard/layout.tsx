@@ -2,13 +2,15 @@ import { AppSidebar } from '@/components/app-sidebar';
 import { SiteHeader } from '@/components/site-header';
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
 import { auth } from '@clerk/nextjs/server';
-import { redirect, RedirectType } from 'next/navigation';
+import { redirect, RedirectType, usePathname } from 'next/navigation';
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
 }
 
-export default async function DashboardLayout({ children }: DashboardLayoutProps) {
+export default async function DashboardLayout({
+  children,
+}: DashboardLayoutProps) {
   const authObject = await auth();
 
   if (!authObject.userId) {
