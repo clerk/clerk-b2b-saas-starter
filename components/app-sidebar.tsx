@@ -118,6 +118,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               },
             },
           }}
+          userProfileProps={{
+            appearance: {
+              elements: {
+                navbarButton__billing: {
+                  display: 'none',
+                },
+              },
+            },
+          }}
         />
       </SidebarFooter>
     </Sidebar>
