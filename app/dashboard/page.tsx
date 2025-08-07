@@ -1,40 +1,51 @@
-import { UserButton } from '@clerk/nextjs';
+import { AppSidebar } from '@/components/app-sidebar';
+import { ChartAreaInteractive } from '@/components/chart-area-interactive';
+import { DataTable } from '@/components/data-table';
+import { SectionCards } from '@/components/section-cards';
+import { SiteHeader } from '@/components/site-header';
+import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
+
 import { auth } from '@clerk/nextjs/server';
-import { ClerkLogo } from '../_components/clerk-logo';
-import { CodeSwitcher } from '../_components/code-switcher';
-import { UserDetails } from '../_components/user-details';
-import { LearnMore } from '../_components/learn-more';
+
+import data from './data.json';
+import { redirect, RedirectType } from 'next/navigation';
 
 export default async function Page() {
-  // Check if the user requesting this page is authenticated (signed in) and if not, require authentication before allowing access
-  // See here for information https://clerk.com/docs/references/nextjs/auth#protect-pages-and-routes
-  await auth.protect({
-    unauthenticatedUrl: '/sign-in',
-  });
+  const authObject = await auth();
+
+  if (!authObject.userId) {
+    return redirect('/sign-in', RedirectType.replace);
+  }
+
+  // If no active org
+  if (!authObject.orgId) {
+    return redirect('/onboarding', RedirectType.replace);
+  }
 
   return (
-    <main className='mx-auto w-full max-w-[80rem] bg-white px-10'>
-      <div className='grid grid-cols-1 gap-10 pb-10 md:grid-cols-[1fr_20.5rem]'>
-        <div>
-          <header className='flex h-16 w-full items-center justify-between gap-4'>
-            <ClerkLogo />
-            <div className='flex items-center gap-2'>
-              <UserButton
-                appearance={{
-                  elements: {
-                    userButtonAvatarBox: 'size-8',
-                  },
-                }}
-              />
+    <SidebarProvider
+      style={
+        {
+          '--sidebar-width': 'calc(var(--spacing) * 72)',
+          '--header-height': 'calc(var(--spacing) * 12)',
+        } as React.CSSProperties
+      }
+    >
+      <AppSidebar variant='inset' />
+      <SidebarInset>
+        <SiteHeader />
+        <div className='flex flex-1 flex-col'>
+          <div className='@container/main flex flex-1 flex-col gap-2'>
+            <div className='flex flex-col gap-4 py-4 md:gap-6 md:py-6'>
+              <SectionCards />
+              <div className='px-4 lg:px-6'>
+                <ChartAreaInteractive />
+              </div>
+              <DataTable data={data} />
             </div>
-          </header>
-          <UserDetails />
+          </div>
         </div>
-        <div className='flex flex-col md:pt-16'>
-          <CodeSwitcher />
-        </div>
-      </div>
-      <LearnMore />
-    </main>
+      </SidebarInset>
+    </SidebarProvider>
   );
 }

@@ -32,20 +32,23 @@ export default function Page() {
           <ClerkLogo />
           <div className='pb-6'>
             <h1 className='text-5xl font-bold tracking-tight text-[#131316]'>
-              Auth starts here
+              Start your journey
             </h1>
             <p className='max-w-[30rem] pt-3 text-[1.0625rem] text-[#5E5F6E]'>
-              This is Clerk's <code>{`<SignUp />`}</code> component.
+              Create your account and set up your organization to get started.
             </p>
             <p className='max-w-[30rem] text-[1.0625rem] text-[#5E5F6E]'>
-              Give it a try by signing up as your first user.
+              Already have an account?{' '}
+              <a href='/sign-in' className='text-blue-600 hover:underline'>
+                Sign in
+              </a>
             </p>
           </div>
         </div>
 
         <SignUp
           signInUrl='/sign-in'
-          forceRedirectUrl='/dashboard'
+          forceRedirectUrl='/onboarding'
           unsafeMetadata={{ source: 'nextjs-quickstart-demo-app' }}
         />
       </div>

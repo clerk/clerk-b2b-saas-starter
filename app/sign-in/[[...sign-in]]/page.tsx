@@ -32,13 +32,17 @@ export default function Page() {
           <ClerkLogo />
           <div className='pb-6'>
             <h1 className='text-5xl font-bold tracking-tight text-[#131316]'>
-              Auth starts here
+              Welcome back
             </h1>
             <p className='max-w-[30rem] pt-3 text-[1.0625rem] text-[#5E5F6E]'>
-              This is Clerk's <code>{`<SignIn />`}</code> component.
+              Sign in to access your organization dashboard and manage your
+              team.
             </p>
             <p className='max-w-[30rem] text-[1.0625rem] text-[#5E5F6E]'>
-              Give it a try by signing in as your first user.
+              Don't have an account?{' '}
+              <a href='/sign-up' className='text-blue-600 hover:underline'>
+                Sign up for free
+              </a>
             </p>
           </div>
         </div>
