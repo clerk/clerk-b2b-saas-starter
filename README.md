@@ -9,7 +9,7 @@
 </p>
 <div align="center">
   <h1>
-    Clerk and Next.js App Router Quickstart Demo App
+    Clerk B2B Saas Starter Template
   </h1>
   <a href="https://www.npmjs.com/package/@clerk/clerk-js">
     <img alt="Downloads" src="https://img.shields.io/npm/dm/@clerk/clerk-js" />
@@ -40,7 +40,7 @@ Easily deploy the template to Vercel with the button below. You will need to set
 ## Running the template
 
 ```bash
-git clone https://github.com/clerk/clerk-nextjs-quickstart-demo-app
+git clone https://github.com/clerk/clerk-b2b-saas-starter
 ```
 
 > Note: Node v22+ is required.
