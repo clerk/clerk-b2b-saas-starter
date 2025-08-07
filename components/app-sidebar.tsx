@@ -2,22 +2,15 @@
 
 import * as React from 'react';
 import {
-  IconCamera,
-  IconChartBar,
   IconCreditCard,
   IconDashboard,
-  IconDatabase,
-  IconFileAi,
-  IconFileDescription,
-  IconFileWord,
   IconFolder,
-  IconHelp,
-  IconInnerShadowTop,
-  IconListDetails,
-  IconReport,
   IconSearch,
+  IconUsersGroup,
   IconSettings,
-  IconUsers,
+  IconPuzzle,
+  IconMessage,
+  IconStackFront,
 } from '@tabler/icons-react';
 
 import { NavMain } from '@/components/nav-main';
@@ -28,10 +21,10 @@ import {
   SidebarFooter,
   SidebarHeader,
   SidebarMenu,
-  SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
 import { OrganizationSwitcher, UserButton } from '@clerk/nextjs';
+import { Badge } from 'lucide-react';
 
 const data = {
   navMain: [
@@ -40,29 +33,22 @@ const data = {
       url: '/dashboard',
       icon: IconDashboard,
     },
-    {
-      title: 'Lifecycle',
-      url: '#',
-      icon: IconListDetails,
-      disabled: true,
-    },
-    {
-      title: 'Analytics',
-      url: '#',
-      icon: IconChartBar,
-      disabled: true,
-    },
+
     {
       title: 'Projects',
-      url: '#',
+      url: '/dashboard/projects',
       icon: IconFolder,
-      disabled: true,
     },
     {
-      title: 'Team',
+      title: 'Teams',
+      url: '/dashboard/teams',
+      icon: IconUsersGroup,
+    },
+    {
+      title: 'A new feature (Soon)',
       url: '#',
-      icon: IconUsers,
       disabled: true,
+      icon: IconStackFront,
     },
   ],
   navSecondary: [
@@ -72,15 +58,21 @@ const data = {
       icon: IconCreditCard,
     },
     {
+      title: 'Integrations',
+      url: '#',
+      icon: IconPuzzle,
+      disabled: true,
+    },
+    {
       title: 'Settings',
       url: '#',
       icon: IconSettings,
       disabled: true,
     },
     {
-      title: 'Get Help',
+      title: 'Chat with support',
       url: '#',
-      icon: IconHelp,
+      icon: IconMessage,
       disabled: true,
     },
     {
