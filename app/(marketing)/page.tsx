@@ -58,7 +58,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className='mx-auto mt-16 md:mt-32 w-full max-w-6xl px-4'>
+      <section className='mx-auto my-16 md:my-32 w-full max-w-6xl px-4'>
         <header className='mx-auto flex flex-col items-center gap-2 text-center'>
           <TypographyH2>
             Everything you need to launch

@@ -24,7 +24,7 @@ export default function PricingPage() {
         <PricingTable />
       </section>
 
-      <section className="mt-16 md:mt-32 w-full max-w-2xl mx-auto px-4">
+      <section className="my-16 md:my-32 w-full max-w-2xl mx-auto px-4">
         <header className='flex flex-col items-center mx-auto gap-2 text-center'>
           <TypographyH2>
             Frequently Asked Questions
