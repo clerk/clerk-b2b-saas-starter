@@ -17,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'B2B SaaS Starter',
+  title: 'Clerk - B2B SaaS Starter',
   description:
     'A modern B2B SaaS starter with organization management and authentication',
 };
