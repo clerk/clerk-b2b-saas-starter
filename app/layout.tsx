@@ -3,6 +3,7 @@ import { shadcn } from '@clerk/themes';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { ThemeProvider } from '@/components/theme-provider';
+import Footer from '@/components/footer';
 
 import './globals.css';
 
@@ -18,8 +19,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: 'Clerk - B2B SaaS Starter',
-  description:
-    'A modern B2B SaaS starter with organization management and authentication',
+  description: 'A modern B2B SaaS starter with organization management and authentication',
 };
 
 export default function RootLayout({
