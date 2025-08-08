@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { env } from 'process'
 
 const links = [
   {
@@ -11,11 +12,11 @@ const links = [
   },
   {
     title: 'Sign in',
-    href: '/sign-in',
+    href: env.NEXT_PUBLIC_CLERK_SIGN_IN_URL || '/sign-in',
   },
   {
     title: 'Sign up',
-    href: '/sign-up',
+    href: env.NEXT_PUBLIC_CLERK_SIGN_UP_URL || '/sign-up',
   }
 ]
 
