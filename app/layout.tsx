@@ -3,7 +3,8 @@ import { shadcn } from '@clerk/themes';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { ThemeProvider } from '@/components/theme-provider';
-import Footer from '@/components/footer';
+
+import { PUBLISHABLE_KEY } from '@/contants/keys';
 
 import './globals.css';
 
@@ -19,7 +20,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: 'Clerk - B2B SaaS Starter',
-  description: 'A modern B2B SaaS starter with organization management and authentication',
+  description:
+    'A modern B2B SaaS starter with organization management and authentication',
 };
 
 export default function RootLayout({
@@ -29,15 +31,20 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider
+      publishableKey={PUBLISHABLE_KEY}
       appearance={{
-        theme: shadcn
+        theme: shadcn,
       }}
     >
-      <html lang='en' className={`${geistSans.variable} ${geistMono.variable} h-full`} suppressHydrationWarning>
-        <body className='antialiased flex flex-col min-h-full'>
+      <html
+        lang='en'
+        className={`${geistSans.variable} ${geistMono.variable} h-full`}
+        suppressHydrationWarning
+      >
+        <body className='flex min-h-full flex-col antialiased'>
           <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
+            attribute='class'
+            defaultTheme='system'
             enableSystem
             disableTransitionOnChange
           >
