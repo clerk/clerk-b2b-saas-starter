@@ -1,7 +1,10 @@
 import { ClerkProvider } from '@clerk/nextjs';
+import { shadcn } from '@clerk/themes';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import { Footer } from './_components/footer';
+import { ThemeProvider } from '@/components/theme-provider';
+import Footer from '@/components/footer';
+
 import './globals.css';
 
 const geistSans = localFont({
@@ -15,9 +18,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'B2B SaaS Starter',
-  description:
-    'A modern B2B SaaS starter with organization management and authentication',
+  title: 'Clerk - B2B SaaS Starter',
+  description: 'A modern B2B SaaS starter with organization management and authentication',
 };
 
 export default function RootLayout({
@@ -28,13 +30,19 @@ export default function RootLayout({
   return (
     <ClerkProvider
       appearance={{
-        cssLayerName: 'clerk',
+        theme: shadcn
       }}
     >
-      <html lang='en' className={`${geistSans.variable} ${geistMono.variable}`}>
-        <body className='bg-neutral-50 antialiased'>
-          {children}
-          <Footer />
+      <html lang='en' className={`${geistSans.variable} ${geistMono.variable} h-full`} suppressHydrationWarning>
+        <body className='antialiased flex flex-col min-h-full'>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
