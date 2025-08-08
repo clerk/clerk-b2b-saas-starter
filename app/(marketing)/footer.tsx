@@ -8,6 +8,14 @@ const links = [
   {
     title: 'Pricing',
     href: '/pricing',
+  },
+  {
+    title: 'Sign in',
+    href: '/sign-in',
+  },
+  {
+    title: 'Sign up',
+    href: '/sign-up',
   }
 ]
 

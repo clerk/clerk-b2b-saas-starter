@@ -15,7 +15,7 @@ export default function Header() {
         </svg>
         <span className="font-semibold">Acme Co.</span>
       </Link>
-      <div className="flex items-center gap-x-4">
+      <div className="flex items-center gap-x-2">
         <SignedOut>
           <Button variant="ghost" asChild>
             <Link href="/pricing">Pricing</Link>
@@ -24,14 +24,13 @@ export default function Header() {
             <Button variant="ghost">Sign in</Button>
           </SignInButton>
           <SignUpButton>
-            <Button>Sign up</Button>
+            <Button className="ml-4">Sign up</Button>
           </SignUpButton>
         </SignedOut>
         <SignedIn>
           <Button asChild>
             <Link href="/dashboard">Dashboard</Link>
           </Button>
-          <UserButton fallback={<Skeleton className='size-7 rounded-full' />} />
         </SignedIn>
       </div>
     </header>

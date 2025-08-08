@@ -99,26 +99,28 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavSecondary items={data.navSecondary} className='mt-auto' />
       </SidebarContent>
       <SidebarFooter>
-        <UserButton
-          showName
-          // TODO: how to hide user plans?
-          appearance={{
-            elements: {
-              userButtonBox: {
-                flexDirection: 'row-reverse',
-              },
-            },
-          }}
-          userProfileProps={{
-            appearance: {
+        <div className="px-2 pb-2">
+          <UserButton
+            showName
+            // TODO: how to hide user plans?
+            appearance={{
               elements: {
-                navbarButton__billing: {
-                  display: 'none',
+                userButtonBox: {
+                  flexDirection: 'row-reverse',
                 },
               },
-            },
-          }}
-        />
+            }}
+            userProfileProps={{
+              appearance: {
+                elements: {
+                  navbarButton__billing: {
+                    display: 'none',
+                  },
+                },
+              },
+            }}
+          />
+        </div>
       </SidebarFooter>
       <SidebarRail />
     </Sidebar>
