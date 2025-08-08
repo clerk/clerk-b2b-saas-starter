@@ -1,6 +1,6 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
-import { PUBLISHABLE_KEY } from '@/contants/keys';
+import { PUBLISHABLE_KEY } from '@/contants/placeholder';
 
 const isProtectedRoute = createRouteMatcher(['/dashboard(.*)']);
 

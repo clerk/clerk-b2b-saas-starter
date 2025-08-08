@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { ThemeProvider } from '@/components/theme-provider';
 
-import { PUBLISHABLE_KEY } from '@/contants/keys';
+import { PUBLISHABLE_KEY } from '@/contants/placeholder';
 
 import './globals.css';
 
