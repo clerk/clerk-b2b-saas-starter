@@ -1,5 +1,6 @@
-import { Header } from './header'
-import { Footer } from './footer'
+import { Header } from './header';
+import { Footer } from './footer';
+import { Toast } from './toast';
 
 export default function MarketingLayout({
   children,
@@ -9,7 +10,8 @@ export default function MarketingLayout({
   return (
     <>
       <Header />
-      <main className='flex flex-col flex-1 w-full'>{children}</main>
+      <Toast />
+      <main className='flex w-full flex-1 flex-col'>{children}</main>
       <Footer />
     </>
   );

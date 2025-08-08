@@ -2,8 +2,9 @@ import { ClerkProvider } from '@clerk/nextjs';
 import { shadcn } from '@clerk/themes';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import { ThemeProvider } from '@/components/theme-provider';
 
+import { Toaster } from '@/components/ui/sonner';
+import { ThemeProvider } from '@/components/theme-provider';
 import { PUBLISHABLE_KEY } from '@/contants/placeholder';
 
 import './globals.css';
@@ -49,6 +50,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
+            <Toaster />
           </ThemeProvider>
         </body>
       </html>
