@@ -20,7 +20,7 @@ export default function PricingPage() {
         </TypographyLead>
       </section>
 
-      <section className="mt-4 md:mt-8 w-full max-w-6xl mx-auto px-4">
+      <section className="mt-8 w-full max-w-6xl mx-auto px-4">
         <PricingTable />
       </section>
 

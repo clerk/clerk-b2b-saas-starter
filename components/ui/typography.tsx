@@ -17,7 +17,7 @@ export function TypographyH2({ children, className, ...props }: { children: Reac
 
 export function TypographyLead({ children, className, ...props }: { children: React.ReactNode, className?: string } & React.HTMLAttributes<HTMLParagraphElement>) {
   return (
-    <p className={cn("text-muted-foreground text-xl", className)} {...props}>
+    <p className={cn("text-muted-foreground text-xl text-pretty", className)} {...props}>
       {children}
     </p>
   )
