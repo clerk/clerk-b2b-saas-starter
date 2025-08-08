@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import { Skeleton } from '@/components/ui/skeleton';
 import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import Link from 'next/link'
 
@@ -32,7 +33,7 @@ export default function MarketingLayout({
             <Button asChild>
               <Link href="/dashboard">Dashboard</Link>
             </Button>
-            <UserButton />
+            <UserButton fallback={<Skeleton className='size-7 rounded-full' />} />
           </SignedIn>
         </div>
       </header>
