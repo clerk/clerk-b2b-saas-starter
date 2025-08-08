@@ -2,7 +2,8 @@ import { ClerkProvider } from '@clerk/nextjs';
 import { shadcn } from '@clerk/themes';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import { Footer } from './_components/footer';
+import { ThemeProvider } from '@/components/theme-provider';
+
 import './globals.css';
 
 const geistSans = localFont({
@@ -32,9 +33,16 @@ export default function RootLayout({
         theme: shadcn
       }}
     >
-      <html lang='en' className={`${geistSans.variable} ${geistMono.variable}`}>
-        <body className='antialiased'>
-          {children}
+      <html lang='en' className={`${geistSans.variable} ${geistMono.variable} h-full`} suppressHydrationWarning>
+        <body className='antialiased flex flex-col min-h-full'>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
