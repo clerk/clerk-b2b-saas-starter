@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
-export default function Header() {
+export function Header() {
   return (
     <header className="flex h-16 items-center justify-between gap-4 border-b px-4">
       <Link href="/" className="flex items-center gap-x-4">

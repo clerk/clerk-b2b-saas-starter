@@ -1,9 +1,5 @@
-import { Button } from '@/components/ui/button'
-import { Skeleton } from '@/components/ui/skeleton';
-import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
-import Link from 'next/link'
-import Header from './header'
-import Footer from './footer'
+import { Header } from './header'
+import { Footer } from './footer'
 
 export default function MarketingLayout({
   children,

@@ -19,9 +19,9 @@ const links = [
   }
 ]
 
-export default function FooterSection() {
+export function Footer() {
   return (
-    <footer className="border-b bg-white py-12 dark:bg-transparent">
+    <footer className="border-t bg-white py-12 dark:bg-transparent">
       <div className="mx-auto max-w-6xl px-4">
         <div className="flex flex-wrap justify-between gap-6">
           <span className="text-muted-foreground order-last block text-center text-sm md:order-first">© {new Date().getFullYear()} Acme Co., All rights reserved</span>
