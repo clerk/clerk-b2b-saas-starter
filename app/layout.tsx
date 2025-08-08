@@ -1,4 +1,5 @@
 import { ClerkProvider } from '@clerk/nextjs';
+import { shadcn } from '@clerk/themes';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import { Footer } from './_components/footer';
@@ -28,13 +29,12 @@ export default function RootLayout({
   return (
     <ClerkProvider
       appearance={{
-        cssLayerName: 'clerk',
+        theme: shadcn
       }}
     >
       <html lang='en' className={`${geistSans.variable} ${geistMono.variable}`}>
-        <body className='bg-neutral-50 antialiased'>
+        <body className='antialiased'>
           {children}
-          <Footer />
         </body>
       </html>
     </ClerkProvider>
