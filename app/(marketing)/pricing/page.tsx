@@ -5,18 +5,19 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { TypographyH1, TypographyH2, TypographyLead } from "@/components/ui/typography";
 
 export default function PricingPage() {
   return (
     <>
       <section className='w-full max-w-6xl px-4 flex flex-col items-center mx-auto gap-4 mt-16 md:mt-32 text-center'>
-        <h1 className='leading-tighter max-w-4xl text-4xl font-semibold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-5xl xl:tracking-tighter'>
+        <TypographyH1>
           Simple, transparent pricing
-        </h1>
-        <p className='text-foreground max-w-3xl text-base text-balance sm:text-lg'>
+        </TypographyH1>
+        <TypographyLead>
           Choose the perfect plan for your team. Start free and scale as you
           grow.
-        </p>
+        </TypographyLead>
       </section>
 
       <section className="mt-4 md:mt-8 w-full max-w-6xl mx-auto px-4">
@@ -25,12 +26,12 @@ export default function PricingPage() {
 
       <section className="mt-16 md:mt-32 w-full max-w-2xl mx-auto px-4">
         <header className='flex flex-col items-center mx-auto gap-2 text-center'>
-          <h2 className='leading-tighter max-w-xl text-2xl font-semibold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-4xl xl:tracking-tighter'>
+          <TypographyH2>
             Frequently Asked Questions
-          </h2>
-          <p className='text-foreground max-w-3xl text-base text-balance sm:text-lg'>
+          </TypographyH2>
+          <TypographyLead>
             Everything you need to know about our pricing and billing.
-          </p>
+          </TypographyLead>
         </header>
         <Accordion type="single" collapsible className="mt-8">
           <AccordionItem value="item-1">

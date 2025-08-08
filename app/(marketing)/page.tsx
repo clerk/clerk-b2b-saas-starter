@@ -9,6 +9,7 @@ import { ArrowRight, Fingerprint, CreditCard, Building } from 'lucide-react';
 import { SignUpButton } from '@clerk/nextjs';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { TypographyH1, TypographyH2, TypographyLead } from '@/components/ui/typography';
 
 export default function HomePage() {
   return (
@@ -37,14 +38,14 @@ export default function HomePage() {
             Powered by Clerk
           </Link>
         </Badge>
-        <h1 className='leading-tighter max-w-4xl text-4xl font-semibold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-5xl xl:tracking-tighter'>
+        <TypographyH1 className="lg:text-6xl">
           Build your B2B SaaS{' '}
           <span className='text-primary block'>faster than ever</span>
-        </h1>
-        <p className='text-foreground max-w-3xl text-base text-balance sm:text-lg'>
+        </TypographyH1>
+        <TypographyLead className="max-w-prose text-balance">
           Complete authentication, organization management, and billing
           infrastructure so you can focus on building your core product.
-        </p>
+        </TypographyLead>
         <div className='flex w-full items-center justify-center gap-2 pt-2 **:data-[slot=button]:shadow-none'>
           <SignUpButton>
             <Button>Get Started</Button>
@@ -59,12 +60,12 @@ export default function HomePage() {
 
       <section className='mx-auto mt-16 md:mt-32 w-full max-w-6xl px-4'>
         <header className='mx-auto flex flex-col items-center gap-2 text-center'>
-          <h2 className='leading-tighter max-w-xl text-2xl font-semibold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-4xl xl:tracking-tighter'>
+          <TypographyH2>
             Everything you need to launch
-          </h2>
-          <p className='text-foreground max-w-3xl text-base text-balance sm:text-lg'>
+          </TypographyH2>
+          <TypographyLead>
             Built-in features that would take months to develop from scratch
-          </p>
+          </TypographyLead>
         </header>
         <div className='mt-8 grid grid-cols-1 md:grid-cols-3 gap-4'>
           <Card>
