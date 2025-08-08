@@ -9,7 +9,7 @@ import {
 export default function PricingPage() {
   return (
     <>
-      <section className='w-full max-w-6xl px-4 flex flex-col items-center mx-auto gap-4 mt-32 text-center'>
+      <section className='w-full max-w-6xl px-4 flex flex-col items-center mx-auto gap-4 mt-16 md:mt-32 text-center'>
         <h1 className='leading-tighter max-w-4xl text-4xl font-semibold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-5xl xl:tracking-tighter'>
           Simple, transparent pricing
         </h1>
@@ -19,11 +19,11 @@ export default function PricingPage() {
         </p>
       </section>
 
-      <section className="mt-8 w-full max-w-6xl mx-auto px-4">
+      <section className="mt-4 md:mt-8 w-full max-w-6xl mx-auto px-4">
         <PricingTable />
       </section>
 
-      <section className="mt-32 w-full max-w-2xl mx-auto px-4">
+      <section className="mt-16 md:mt-32 w-full max-w-2xl mx-auto px-4">
         <header className='flex flex-col items-center mx-auto gap-2 text-center'>
           <h2 className='leading-tighter max-w-xl text-2xl font-semibold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-4xl xl:tracking-tighter'>
             Frequently Asked Questions

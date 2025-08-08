@@ -13,7 +13,7 @@ import { Badge } from '@/components/ui/badge';
 export default function HomePage() {
   return (
     <>
-      <section className='mx-auto mt-32 flex w-full max-w-6xl flex-col items-center gap-4 px-4 text-center'>
+      <section className='mx-auto mt-16 md:mt-32 flex w-full max-w-6xl flex-col items-center gap-4 px-4 text-center'>
         <Badge variant='secondary' asChild>
           <Link
             href='https://clerk.com'
@@ -51,13 +51,13 @@ export default function HomePage() {
           </SignUpButton>
           <Button variant='ghost' asChild>
             <Link href='/pricing'>
-              View pricing <ArrowRight className='size-4' />
+              View pricing <ArrowRight />
             </Link>
           </Button>
         </div>
       </section>
 
-      <section className='mx-auto mt-32 w-full max-w-6xl px-4'>
+      <section className='mx-auto mt-16 md:mt-32 w-full max-w-6xl px-4'>
         <header className='mx-auto flex flex-col items-center gap-2 text-center'>
           <h2 className='leading-tighter max-w-xl text-2xl font-semibold tracking-tight text-balance lg:leading-[1.1] lg:font-semibold xl:text-4xl xl:tracking-tighter'>
             Everything you need to launch
@@ -66,7 +66,7 @@ export default function HomePage() {
             Built-in features that would take months to develop from scratch
           </p>
         </header>
-        <div className='mt-8 grid grid-cols-3 gap-4'>
+        <div className='mt-8 grid grid-cols-1 md:grid-cols-3 gap-4'>
           <Card>
             <CardHeader>
               <Building className='mb-4 size-8' />
