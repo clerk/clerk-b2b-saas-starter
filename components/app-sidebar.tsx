@@ -25,6 +25,7 @@ import {
   SidebarRail,
 } from '@/components/ui/sidebar';
 import { OrganizationSwitcher, UserButton } from '@clerk/nextjs';
+import { Skeleton } from './ui/skeleton';
 
 const data = {
   navMain: [
@@ -90,7 +91,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <OrganizationSwitcher hidePersonal skipInvitationScreen />
+            <OrganizationSwitcher hidePersonal skipInvitationScreen fallback={<Skeleton className='h-7 w-full' />} />
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
@@ -119,6 +120,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 },
               },
             }}
+            fallback={<Skeleton className='size-7 rounded-full' />}
           />
         </div>
       </SidebarFooter>
