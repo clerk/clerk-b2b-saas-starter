@@ -12,7 +12,7 @@ export default clerkMiddleware(
   () => {
     return {
       publishableKey: PUBLISHABLE_KEY,
-      secretKey: 'sk_test_gototheclerkdashboard',
+      secretKey: process.env.CLERK_SECRET_KEY!,
     };
   },
 );
