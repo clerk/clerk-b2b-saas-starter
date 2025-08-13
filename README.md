@@ -43,6 +43,8 @@ git clone https://github.com/clerk/clerk-b2b-saas-starter
 
 > Note: Node v22+ is required.
 
+**Before running the app, rename `.env.example` to `.env` and add your Clerk keys.**
+
 To run the example locally, you need to:
 
 1. `npm install` the required dependencies.
