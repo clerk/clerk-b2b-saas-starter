@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="https://clerk.com?utm_source=github&utm_medium=clerk_docs" target="_blank" rel="noopener noreferrer">
+  <a href="https://clerk.com?utm_source=github&utm_medium=clerk-backend-php" target="_blank" rel="noopener noreferrer">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./public/light-logo.png">
-      <img alt="Clerk Logo for light background" src="./public/dark-logo.png" height="64">
+      <source media="(prefers-color-scheme: dark)" srcset="https://images.clerk.com/static/logo-dark-mode-400x400.png">
+      <img src="https://images.clerk.com/static/logo-light-mode-400x400.png" height="64">
     </picture>
   </a>
   <br />
@@ -21,8 +21,6 @@
     <img alt="Twitter" src="https://img.shields.io/twitter/url.svg?label=%40clerkdev&style=social&url=https%3A%2F%2Ftwitter.com%2Fclerkdev" />
   </a>
   <br />
-  <br />
-  <img alt="Clerk Hero Image" src="./public/hero.png">
 </div>
 
 ## Introduction
@@ -44,6 +42,8 @@ git clone https://github.com/clerk/clerk-b2b-saas-starter
 ```
 
 > Note: Node v22+ is required.
+
+**Before running the app, rename `.env.example` to `.env` and add your Clerk keys.**
 
 To run the example locally, you need to:
 
