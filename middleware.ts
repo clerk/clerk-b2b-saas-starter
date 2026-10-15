@@ -8,13 +8,7 @@ export default clerkMiddleware(
   async (auth, req) => {
     if (isProtectedRoute(req)) await auth.protect();
   },
-  // https://clerk.com/docs/references/nextjs/clerk-middleware#dynamic-keys
-  () => {
-    return {
-      publishableKey: PUBLISHABLE_KEY,
-      secretKey: 'sk_test_gototheclerkdashboard',
-    };
-  },
+  { publishableKey: PUBLISHABLE_KEY },
 );
 
 export const config = {
