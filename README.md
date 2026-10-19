@@ -49,7 +49,7 @@ To run the example locally, you need to:
 
 1. `pnpm install` the required dependencies.
 1. `pnpm run dev` to launch the development server.
-1. Visit the app's homepage to sign up.
+1. Visit `/` and `/pricing` to preview the starter with its shared demo Clerk instance. To test sign-up, the dashboard, and checkout, set both `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY` for your own Clerk development instance.
 
 ## Learn more
 
