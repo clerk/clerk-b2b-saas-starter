@@ -29,7 +29,7 @@
 
 Clerk is a developer-first authentication and user management solution. It provides pre-built React components and hooks for sign-in, sign-up, user profile, and organization management. Clerk is designed to be easy to use and customize, and can be dropped into any React or Next.js application.
 
-Learn how to create your first user with this quickstart demo app.
+Use this template to start a B2B SaaS app with Clerk authentication, organizations, and billing.
 
 ## Deploy
 
@@ -55,8 +55,8 @@ To run the example locally, you need to:
 
 To learn more about Clerk and Next.js, check out the following resources:
 
-- [Quickstart: Get started with Next.js and Clerk](https://clerk.com/docs/quickstarts/nextjs?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=nextjs-quickstart-demo-app)
-- [Clerk Documentation](https://clerk.com/docs?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=nextjs-quickstart-demo-app)
+- [Quickstart: Get started with Next.js and Clerk](https://clerk.com/docs/quickstarts/nextjs?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-b2b-saas-starter)
+- [Clerk Documentation](https://clerk.com/docs?utm_source=DevRel&utm_medium=docs&utm_campaign=templates&utm_content=clerk-b2b-saas-starter)
 - [Next.js Documentation](https://nextjs.org/docs)
 
 ## Found an issue or want to leave feedback

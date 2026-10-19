@@ -1,15 +1,9 @@
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+import { clerkMiddleware } from '@clerk/nextjs/server';
 
 import { PUBLISHABLE_KEY } from '@/contants/placeholder';
 
-const isProtectedRoute = createRouteMatcher(['/dashboard(.*)']);
-
-export default clerkMiddleware(
-  async (auth, req) => {
-    if (isProtectedRoute(req)) await auth.protect();
-  },
-  { publishableKey: PUBLISHABLE_KEY },
-);
+// Protected pages check auth themselves with `auth.protect()`.
+export default clerkMiddleware({ publishableKey: PUBLISHABLE_KEY });
 
 export const config = {
   matcher: [
