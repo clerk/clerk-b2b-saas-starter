@@ -1,3 +1,5 @@
+import { auth } from "@clerk/nextjs/server"
+
 import { AppSidebar } from "@/components/app-sidebar"
 import {
   Breadcrumb,
@@ -14,7 +16,10 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 
-export default function Page() {
+export default async function Page() {
+  // Redirect signed-out users to sign-in
+  await auth.protect()
+
   return (
     <SidebarProvider>
       <AppSidebar />

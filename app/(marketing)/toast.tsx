@@ -11,7 +11,7 @@ export const Toast = () => {
         description: (
           <>
             This project is using shared Clerk keys for demonstration purposes.
-            Sign up Clerk Dashboard and and use your own keys.
+            Create a Clerk application in the Clerk Dashboard and use its keys.
             <br />
             <Link
               className='font-bold underline'

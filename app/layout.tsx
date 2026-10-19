@@ -1,5 +1,5 @@
 import { ClerkProvider } from '@clerk/nextjs';
-import { shadcn } from '@clerk/themes';
+import { shadcn } from '@clerk/ui/themes';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
@@ -31,18 +31,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider
-      publishableKey={PUBLISHABLE_KEY}
-      appearance={{
-        theme: shadcn,
-      }}
+    <html
+      lang='en'
+      className={`${geistSans.variable} ${geistMono.variable} h-full`}
+      suppressHydrationWarning
     >
-      <html
-        lang='en'
-        className={`${geistSans.variable} ${geistMono.variable} h-full`}
-        suppressHydrationWarning
-      >
-        <body className='flex min-h-full flex-col antialiased'>
+      <body className='flex min-h-full flex-col antialiased'>
+        <ClerkProvider
+          publishableKey={PUBLISHABLE_KEY}
+          appearance={{
+            theme: shadcn,
+          }}
+        >
           <ThemeProvider
             attribute='class'
             defaultTheme='system'
@@ -52,8 +52,8 @@ export default function RootLayout({
             {children}
             <Toaster />
           </ThemeProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 }

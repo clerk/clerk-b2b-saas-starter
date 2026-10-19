@@ -1,21 +1,16 @@
-import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+import { clerkMiddleware } from '@clerk/nextjs/server';
 
-import { PUBLISHABLE_KEY } from '@/contants/placeholder';
+import { PUBLISHABLE_KEY, USING_DEMO_KEY } from '@/contants/placeholder';
 
-const isProtectedRoute = createRouteMatcher(['/dashboard(.*)']);
-
-export default clerkMiddleware(
-  async (auth, req) => {
-    if (isProtectedRoute(req)) await auth.protect();
-  },
-  // https://clerk.com/docs/references/nextjs/clerk-middleware#dynamic-keys
-  () => {
-    return {
-      publishableKey: PUBLISHABLE_KEY,
-      secretKey: 'sk_test_gototheclerkdashboard',
-    };
-  },
-);
+// Protected pages check auth themselves with `auth.protect()`.
+export default clerkMiddleware({
+  publishableKey: PUBLISHABLE_KEY,
+  ...(process.env.NODE_ENV === 'development' &&
+  USING_DEMO_KEY &&
+  !process.env.CLERK_SECRET_KEY
+    ? { secretKey: 'sk_test_gototheclerkdashboard' }
+    : {}),
+});
 
 export const config = {
   matcher: [
