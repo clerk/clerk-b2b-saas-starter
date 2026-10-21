@@ -1,5 +1,4 @@
 import { auth } from "@clerk/nextjs/server"
-
 import { AppSidebar } from "@/components/app-sidebar"
 import {
   Breadcrumb,
@@ -15,6 +14,9 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+
+// Keep the auth redirect in the initial response for this protected route.
+export const instant = false
 
 export default async function Page() {
   // Redirect signed-out users to sign-in
