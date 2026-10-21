@@ -12,6 +12,8 @@ if (
 }
 
 const nextConfig: NextConfig = {
+  cacheComponents: true,
+  partialPrefetching: true,
   // https://nextjs.org/docs/app/api-reference/config/next-config-js/devIndicators
   devIndicators: {
     position: 'bottom-right',
