@@ -16,7 +16,7 @@ export function Header() {
         <span className='font-semibold'>Acme Co.</span>
       </Link>
       <div className='flex items-center gap-x-2'>
-        <Suspense fallback={null}>
+        <Suspense>
           <Show when='signed-out'>
             <Button variant='ghost' asChild>
               <Link href='/pricing'>Pricing</Link>

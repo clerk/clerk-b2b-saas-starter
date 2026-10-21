@@ -24,7 +24,7 @@ export default function PricingPage() {
       </section>
 
       <section className='mx-auto mt-8 w-full max-w-[1440px] px-4'>
-        <Suspense fallback={null}>
+        <Suspense>
           <PricingTable for='organization' />
         </Suspense>
       </section>

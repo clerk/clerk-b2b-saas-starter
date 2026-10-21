@@ -49,7 +49,7 @@ export default function SignUpPage() {
         </ul>
       </div>
       <div className='flex flex-1 items-center justify-center p-6 md:p-10 lg:justify-start'>
-        <Suspense fallback={null}>
+        <Suspense>
           <SignUp />
         </Suspense>
       </div>
