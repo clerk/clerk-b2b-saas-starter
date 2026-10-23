@@ -1,16 +1,7 @@
 import { clerkMiddleware } from '@clerk/nextjs/server';
 
-import { PUBLISHABLE_KEY, USING_DEMO_KEY } from '@/contants/placeholder';
-
 // Protected pages check auth themselves with `auth.protect()`.
-export default clerkMiddleware({
-  publishableKey: PUBLISHABLE_KEY,
-  ...(process.env.NODE_ENV === 'development' &&
-  USING_DEMO_KEY &&
-  !process.env.CLERK_SECRET_KEY
-    ? { secretKey: 'sk_test_gototheclerkdashboard' }
-    : {}),
-});
+export default clerkMiddleware();
 
 export const config = {
   matcher: [

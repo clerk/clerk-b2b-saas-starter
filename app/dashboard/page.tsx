@@ -1,5 +1,4 @@
 import { auth } from "@clerk/nextjs/server"
-
 import { AppSidebar } from "@/components/app-sidebar"
 import {
   Breadcrumb,
