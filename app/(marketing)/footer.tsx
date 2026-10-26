@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { cacheLife } from 'next/cache';
 import { env } from 'process';
 
 const links = [
@@ -23,7 +22,7 @@ const links = [
 
 export async function Footer() {
   'use cache';
-  cacheLife('days');
+
   return (
     <footer className='border-t bg-white py-12 dark:bg-transparent'>
       <div className='mx-auto max-w-6xl px-4'>

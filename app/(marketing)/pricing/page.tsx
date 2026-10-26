@@ -1,5 +1,4 @@
 import { PricingTable } from '@clerk/nextjs';
-import { Suspense } from 'react';
 import {
   Accordion,
   AccordionContent,
@@ -24,9 +23,7 @@ export default function PricingPage() {
       </section>
 
       <section className='mx-auto mt-8 w-full max-w-[1440px] px-4'>
-        <Suspense>
-          <PricingTable for='organization' />
-        </Suspense>
+        <PricingTable for='organization' />
       </section>
 
       <section className='mx-auto my-16 w-full max-w-2xl px-4 md:my-32'>
