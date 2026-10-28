@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import { env } from 'process'
+import Link from 'next/link';
+import { env } from 'process';
 
 const links = [
   {
@@ -17,21 +17,26 @@ const links = [
   {
     title: 'Sign up',
     href: env.NEXT_PUBLIC_CLERK_SIGN_UP_URL || '/sign-up',
-  }
-]
+  },
+];
 
-export function Footer() {
+export async function Footer() {
+  'use cache';
+
   return (
-    <footer className="border-t bg-white py-12 dark:bg-transparent">
-      <div className="mx-auto max-w-6xl px-4">
-        <div className="flex flex-wrap justify-between gap-6">
-          <span className="text-muted-foreground order-last block text-center text-sm md:order-first">© {new Date().getFullYear()} Acme Co., All rights reserved</span>
-          <div className="order-first flex flex-wrap justify-center gap-6 text-sm md:order-last">
+    <footer className='border-t bg-white py-12 dark:bg-transparent'>
+      <div className='mx-auto max-w-6xl px-4'>
+        <div className='flex flex-wrap justify-between gap-6'>
+          <span className='text-muted-foreground order-last block text-center text-sm md:order-first'>
+            © {new Date().getFullYear()} Acme Co., All rights reserved
+          </span>
+          <div className='order-first flex flex-wrap justify-center gap-6 text-sm md:order-last'>
             {links.map((link, index) => (
               <Link
                 key={index}
                 href={link.href}
-                className="text-muted-foreground hover:text-primary block duration-150">
+                className='text-muted-foreground hover:text-primary block duration-150'
+              >
                 <span>{link.title}</span>
               </Link>
             ))}
@@ -39,5 +44,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

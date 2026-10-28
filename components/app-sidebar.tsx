@@ -91,7 +91,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <OrganizationSwitcher hidePersonal skipInvitationScreen fallback={<Skeleton className='h-7 w-full' />} />
+            <OrganizationSwitcher
+              afterCreateOrganizationUrl='/dashboard'
+              hidePersonal
+              skipInvitationScreen
+              fallback={<Skeleton className='h-7 w-full' />}
+            />
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>

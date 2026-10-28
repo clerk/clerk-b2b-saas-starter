@@ -48,8 +48,8 @@ git clone https://github.com/clerk/clerk-b2b-saas-starter
 To run the example locally, you need to:
 
 1. `pnpm install` the required dependencies.
+1. `npx clerk@latest init --template b2b-saas` to create a Clerk application with Organizations and Billing set up. It doesn't need a Clerk account and writes temporary development keys to `.env.local`. To keep the application, run `npx clerk@latest auth login`, and Clerk claims it for your account.
 1. `pnpm run dev` to launch the development server.
-1. Visit `/` and `/pricing` to preview the starter with its shared demo Clerk instance. To test sign-up, the dashboard, and checkout, set both `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` and `CLERK_SECRET_KEY` for your own Clerk development instance.
 
 ## Learn more
 

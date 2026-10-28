@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Show, SignInButton, SignUpButton } from '@clerk/nextjs';
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 export function Header() {
   return (
@@ -15,22 +16,24 @@ export function Header() {
         <span className='font-semibold'>Acme Co.</span>
       </Link>
       <div className='flex items-center gap-x-2'>
-        <Show when='signed-out'>
-          <Button variant='ghost' asChild>
-            <Link href='/pricing'>Pricing</Link>
-          </Button>
-          <SignInButton>
-            <Button variant='ghost'>Sign in</Button>
-          </SignInButton>
-          <SignUpButton>
-            <Button className='ml-4'>Sign up</Button>
-          </SignUpButton>
-        </Show>
-        <Show when='signed-in'>
-          <Button asChild>
-            <Link href='/dashboard'>Dashboard</Link>
-          </Button>
-        </Show>
+        <Suspense>
+          <Show when='signed-out'>
+            <Button variant='ghost' asChild>
+              <Link href='/pricing'>Pricing</Link>
+            </Button>
+            <SignInButton>
+              <Button variant='ghost'>Sign in</Button>
+            </SignInButton>
+            <SignUpButton>
+              <Button className='ml-4'>Sign up</Button>
+            </SignUpButton>
+          </Show>
+          <Show when='signed-in'>
+            <Button asChild>
+              <Link href='/dashboard'>Dashboard</Link>
+            </Button>
+          </Show>
+        </Suspense>
       </div>
     </header>
   );
